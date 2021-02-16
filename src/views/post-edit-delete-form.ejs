@@ -1,0 +1,67 @@
+<%- include('header.ejs') %>
+<link rel="stylesheet" type="text/css" href="css/post-edit-delete-form.css">
+
+<body>
+        <div class="mainContainer">
+                <div class="formOutContainer">
+                        <div class="formInContainer">
+                                <label>Edit Your Post</label>
+                                <div class="mainFormContainer">
+                                        <div class="leftFormContainer">
+                                                <img src="<%= Data.image %>"
+                                                        style="width: 80%; height: 250px; margin-top: 25px;">
+                                        </div>
+                                        <div class="rightFormContainer">
+                                                <form action="/update" method="POST">
+                                                        <div class="form-group">
+                                                                <label for="posttitle">Post Title</label>
+                                                                <input type="text" class="form-control"
+                                                                        style="color:chocolate" name="title"
+                                                                        value=<%= Data.title %>>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label for="exampleFormControlFile1">Example file input
+                                                                </label>
+                                                                <div style="background-color: #ffff;">
+                                                                        <input type="file" class="form-control-file"
+                                                                                value=<%= Data.image %>>
+                                                                </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label for="soiltype"> Soil Type </label>
+                                                                <input style="color:chocolate" type="text"
+                                                                        class="form-control" name="soil"
+                                                                        value=<%= Data.soil%>>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label for="location"> Location </label>
+                                                                <input style="color:chocolate" type="text"
+                                                                        class="form-control" name="location"
+                                                                        value=<%= Data.location%>>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label for="description"> Description </label>
+                                                                <input style="color:chocolate" type="text"
+                                                                        class="form-control" name="description"
+                                                                        value=<%= Data.description %>>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label for="price"> Price per month </label>
+                                                                <input style="color:chocolate" type="text"
+                                                                        class="form-control" name="rent"
+                                                                        value=<%= Data.rent %>>
+                                                        </div>
+                                                        <button type="submit" name="save" value="save"
+                                                                class="btn btn-primary">Save
+                                                                Changes</button>
+                                                        <button type="submit" class="btn btn-danger">Delete
+                                                                Post</button>
+                                                </form>
+                                        </div>
+                                        <div style="clear: both;"> </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</body>
+<%- include('footer.ejs') %>

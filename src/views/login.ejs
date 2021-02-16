@@ -1,0 +1,48 @@
+<%- include('header.ejs') %>
+</style>
+<link rel="stylesheet" href="css/add-asset-form.css">
+</script>
+
+<body>
+    <div class="mainContainer">
+        <div class="formOutContainer">
+            <div class="formInContainer">
+                <form action="/login" method="POST">
+                    <fieldset>
+                        <legend> Choose your role to login </legend>
+                        <div class="radioContainer" name="userType">
+                            <div class="childRadio">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" name="userType" id="radiofarmer"
+                                        class="custom-control-input green" value="farmer">
+                                    <label class="custom-control-label" for="radiofarmer">Farmer</label>
+                                </div>
+                            </div>
+                            <div class="childRadio">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" name="userType" id="radioassetowner"
+                                        class="custom-control-input green" value="assetOwner">
+                                    <label class="custom-control-label" for="radioassetowner">Asset Owner</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="landFormContainer">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" name="username"
+                                placeholder="Enter Username here" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                placeholder="Enter password here" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" value="">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include('footer.ejs') %>

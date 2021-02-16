@@ -1,0 +1,35 @@
+.mainContainer{
+	display: flex;
+  justify-content: center;
+}
+.formOutContainer{
+	background-color: #CCD8DC;
+	width:80%;
+	text-align: center;
+	display: inline-block;
+}
+.formInContainer{
+	width: 90%;
+	display: inline-block;
+	margin-top:25px;
+	margin-bottom:25px;
+}
+  label{
+	color: #194F62 !important;
+	font-weight:bold;
+}
+.radioContainer{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.childRadio{
+	  display: inline-block;  
+}
+
+.btn-primary{
+	color: #fff !important;
+    background-color: #f14b28 !important;
+    border:none !important;
+
+}

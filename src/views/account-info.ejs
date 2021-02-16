@@ -1,0 +1,52 @@
+<%- include('header.ejs') %>
+<link rel="stylesheet" type="text/css" href="/css/account-info.css">
+
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mainContainer">
+    <div class="formOutContainer">
+      <div class="formInContainer">
+        <form action="/account-info-edit" method="POST">
+          <label>Account Information</label>
+          <div class="accountInfoMainContainer">
+            <label> FirstName:</label><span class="accountInfoText"><%= data.firstname %></span> </br>
+            <label> LastName:</label><span class="accountInfoText"><%= data.lastname %></span> </br>
+            <label> Username:</label><span class="accountInfoText"><%= data.username %></span></br>
+            <label> Email:</label><span class="accountInfoText"><%= data.email %></span></br>
+            <label> Phone:</label><span class="accountInfoText"><%= data.phone %></span></br>
+            <label> Address:</label><span class="accountInfoText"><%= data.address %></span></br>
+            <label> Province:</label><span class="accountInfoText"><%= data.province %></span></br>
+            <label> Account-Type:</label><span class="accountInfoText"><%= data.type %></span></br>
+
+          </div>
+          <button type="submit" name="save" value="save" class="btn btn-primary">Edit</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+<%- include('footer.ejs') %>

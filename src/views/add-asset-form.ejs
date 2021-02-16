@@ -1,0 +1,146 @@
+<%- include('header.ejs') %>
+
+<style>
+    .selectt {
+        display: none;
+    }
+
+    label {
+        margin-right: 20px;
+    }
+</style>
+<link rel="stylesheet" href="css/add-asset-form.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js">
+</script>
+
+<body>
+    <div class="mainContainer">
+        <div class="formOutContainer">
+            <div class="formInContainer">
+                <form>
+                    <fieldset>
+                        <legend> Choose your post </legend>
+                        <div class="radioContainer">
+                            <div class="childRadio">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="radioland" class="custom-control-input green"
+                                        value="landFormContainer">
+                                    <label class="custom-control-label" for="radioland">Land</label>
+                                </div>
+                            </div>
+                            <div class="childRadio">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="radiomachinery" class="custom-control-input green"
+                                        value="machineryFormContainer">
+                                    <label class="custom-control-label" for="radiomachinery">Machinery</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <form action="/addLand" method="POST">
+                    <div class="landFormContainer selectt">
+                        <div class="form-group">
+                            <label for="posttitle">User Name </label>
+                            <input type="text" class="form-control" id="title" name="username"
+                                placehlder="Enter user name ">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="posttitle">Post Title</label>
+                            <input type="text" class="form-control" id="title" name="title"
+                                placehlder="Enter post title here">
+                        </div>
+                        <div class="form-group">
+                            <label for="insertimage">Insert Image</label>
+                            <input type="file" class="form-control" id="image" name="image"
+                                placeholder="Upload Image here">
+                        </div>
+                        <div class="form-group">
+                            <label for="landdimentions">Dimensions of Land</label>
+                            <input type="text" class="form-control" id="landdimentions" name="dimentions"
+                                placeholder="Enter dimentions of land here">
+                        </div>
+                        <div class="form-group">
+                            <label for="soiltype">Soil Type</label>
+                            <input type="text" class="form-control" id="soiltype" name="soil"
+                                placeholder="Enter soil type here">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control" id="location" name="location"
+                                placeholder="Enter location here">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" class="form-control" id="description" name="description"
+                                placeholder="Enter land description here">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Price per month</label>
+                            <input type="text" class="form-control" id="price" name="rent"
+                                placeholder="Enter price here">
+                        </div>
+                        <button type="submit" class="btn btn-primary" value="addland">Submit</button>
+                    </div>
+                </form>
+                <form action="/addMachine" method="POST">
+                    <div class="machineryFormContainer selectt">
+                        <div class="form-group">
+                            <label for="posttitle">User Name </label>
+                            <input type="text" class="form-control" id="title" name="username"
+                                placehlder="Enter user name ">
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Post Title</label>
+                            <input type="text" class="form-control" name="title" id="posttitle"
+                                aria-describedby="emailHelp" placeholder="Enter post title here">
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Insert Image</label>
+                            <input type="file" class="form-control" name="image" id="insertimage"
+                                placeholder="Upload Image here">
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Model Year</label>
+                            <input type="text" class="form-control" name="year" id="landdimentions"
+                                placeholder="Enter model year here">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Model Name</label>
+                            <input type="text" class="form-control" name="name" id="soiltype"
+                                placeholder="Enter model name here">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" class="form-control" name="description" id="description"
+                                placeholder="Enter land description here">
+                        </div>
+                        <div class="form-group">
+                            <label for="rent">Price per month</label>
+                            <input type="text" class="form-control" id="price" name="rent"
+                                placeholder="Enter price here">
+                        </div>
+                        <button type="submit" name="submitform" value="addmachine"
+                            class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('input[type="radio"]').click(function () {
+                var inputValue = $(this).attr("value");
+                console.log("input value : " + inputValue)
+                var targetBox = $("." + inputValue);
+                console.log("target container : " + targetBox)
+                $(".selectt").not(targetBox).hide();
+                $(targetBox).show();
+            });
+        });
+    </script>
+</body>
+<%- include('footer.ejs') %>

@@ -1,0 +1,35 @@
+<%- include('header.ejs') %>
+</style>
+<link rel="stylesheet" href="/css/detailed-post.css">
+
+<body>
+    <div class="mainContainer">
+        <div class="formOutContainer">
+            <div class="formInContainer">
+                <div class="outerDetailContainer">
+                    <div class="imageContainer">
+                        <img src="/img/logo.png" style="width: 250px; height: 250px;">
+                    </div>
+                    <div class="postDetailsContainer">
+                        <label>
+                            <h4>Detailed Post</h4>
+                        </label>
+                        <div>
+                            <label>Post Title:</label> <span class="detailText"> <%= postData.title %> </span>
+                        </div>
+                        <label>Model Year:</label><span class="detailText"><%= postData.year %></span></br>
+                        <label>Model Name:</label><span class="detailText"><%= postData.name %></span></br>
+                        <label>Price:</label><span class="detailText"><%= postData.rent %></span></br>
+                        <label>Description:</label><span
+                            class="detailText descriptionText"><%= postData.description %></span></br>
+                    </div>
+                </div>
+                <div class="buttonContainer">
+                    <a class="btn btn-large btn-primary" href="/directChat">Direct Chat</a>
+                    <a class="btn btn-large btn-primary" href="/payment">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include('footer.ejs') %>

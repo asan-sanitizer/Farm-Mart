@@ -1,0 +1,38 @@
+.mainContainer{
+	display: flex;
+  justify-content: center;
+}
+.formOutContainer{
+	background-color: #CCD8DC;
+	width:80%;
+	padding-left: 30px;
+	display: inline-block;
+}
+.formInContainer{
+	width: 90%;
+	display: inline-block;
+	margin-top:25px;
+	margin-bottom:25px;
+}
+  label{
+	color: #194F62 !important;
+	font-weight:bold;
+}
+
+.btn-primary{
+	color: #fff !important;
+    background-color: #f14b28 !important;
+    border:none !important;
+
+	
+}
+
+.accountInfoMainContainer{
+	margin-top: 20px;
+}
+
+.accountInfoText{
+	margin-left: 20px;
+	color:#F14B28 ;
+	font-weight: bold;
+}

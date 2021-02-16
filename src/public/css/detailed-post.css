@@ -1,0 +1,58 @@
+.mainContainer{
+	display: flex;
+  justify-content: center;
+}
+.formOutContainer{
+	background-color: #CCD8DC;
+	width:80%;
+	display: inline-block;
+	margin-bottom: 50px;
+}
+.formInContainer{
+	width: 90%;
+	margin-top:25px;
+	margin-bottom: 15px;
+
+}
+  label{
+	color: #194F62 !important;
+	font-weight:bold;
+}
+
+.detailText{
+	margin-left: 20px;
+	color:#F14B28 ;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.imageContainer{
+	float: left;
+}
+
+.postDetailsContainer{
+	float: left;
+	margin-left: 25px;
+}
+
+.descriptionText{
+	width: 500px;
+}
+
+.outerDetailContainer{
+	display: flex;
+	align-items: center;
+	margin-left: 25px;
+}
+
+.buttonContainer{
+	text-align: center;
+	margin-top:25px;
+}
+
+.btn-primary{
+	color: #fff !important;
+    background-color: #f14b28 !important;
+    border:none !important;
+
+}

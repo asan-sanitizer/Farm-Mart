@@ -1,0 +1,85 @@
+<%- include('header.ejs') %>
+</style>
+<link rel="stylesheet" href="css/add-asset-form.css">
+
+<body>
+    <div class="mainContainer">
+        <div class="formOutContainer">
+            <div class="formInContainer">
+                <form action="/usercreate" method="POST">
+                    <fieldset>
+                        <legend> Choose your role to signup </legend>
+                        <div class="radioContainer">
+                            <div class="childRadio">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="radiofarmer" name="radioType"
+                                        class="custom-control-input green" value="farmer">
+                                    <label class="custom-control-label" for="radiofarmer">Farmer</label>
+                                </div>
+                            </div>
+                            <div class="childRadio">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="radioassetowner" name="radioType"
+                                        class="custom-control-input green" value="assetOwner">
+                                    <label class="custom-control-label" for="radioassetowner">Asset Owner</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="landFormContainer">
+                        <div class="form-group">
+                            <label for="firstname">First Name </label>
+                            <input type="text" class="form-control" id="firstname" name="firstname"
+                                placeholder="Enter first name here">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" class="form-control" id="lastname" name="lastname"
+                                placeholder="Enter last name here" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Paypal Email</label>
+                            <input type="text" class="form-control" id="email" name="email"
+                                placeholder="Enter your paypal email here" required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone"
+                                placeholder="Enter your phone number here" required pattern="^[0-9-+\s()]*$">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" name="address"
+                                placeholder="Enter your address here" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Province</label>
+                            <select class="browser-default custom-select" name="province" required>
+                                <option name="" value="0" selected>Select Province</option>
+                                <option name="provinceselect" value="ON">ON</option>
+                                <option name="provinceselect" value="QC">QC</option>
+                                <option name="provinceselect" value="AB">AB</option>
+                                <option name="provinceselect" value="BC">BC</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" name="username"
+                                placeholder="Enter Username here" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="text" class="form-control" id="password" name="password"
+                                placeholder="Enter password here" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" value="">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include('footer.ejs') %>

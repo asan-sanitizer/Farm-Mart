@@ -1,0 +1,46 @@
+.mainContainer{
+	display: flex;
+  justify-content: center;
+}
+.formOutContainer{
+	background-color: #CCD8DC;
+	width:80%;
+	text-align: center;
+	display: inline-block;
+}
+.formInContainer{
+	width: 90%;
+	display: inline-block;
+	margin-top:25px;
+	margin-bottom:25px;
+}
+  label{
+	color: #194F62 !important;
+	font-weight:bold;
+}
+
+.btn-primary{
+	color: #fff !important;
+    background-color: #f14b28 !important;
+    border:none !important;
+
+}
+.mainFormContainer{
+	width:100%;
+	margin : 0;
+	margin-top:30px;
+}
+
+.leftFormContainer{
+	width:50%;
+margin : 0;
+float : left ;
+	
+}
+
+.rightFormContainer{
+	width:50%;
+margin : 0;
+float : left ;
+	
+}
